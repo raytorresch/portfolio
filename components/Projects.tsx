@@ -9,6 +9,7 @@ const projects = [
     `,
     stack: "CodeIgniter, MySQL, AngularJS, REST APIs",
     link: "https://celaya.drosmexico.com/index.html",
+    caseStudy: null,
   },
   {
     name: "Bitácora Digital",
@@ -21,6 +22,7 @@ const projects = [
     stack:
       "Flutter, Laravel, Firebase, MySQL, AngularJS, Cloud Functions, Clean Architecture, REST APIs",
     link: "https://bitacoradigital.com.mx",
+    caseStudy: "/work/bitacora",
   },
   {
     name: "Adoptable",
@@ -32,6 +34,7 @@ const projects = [
     `,
     stack: "Flutter, Firebase, BLoC, Cloud Functions, Clean Architecture",
     link: "https://adoptable-landing.vercel.app",
+    caseStudy: null,
   },
   {
     name: "BankMaster",
@@ -43,6 +46,7 @@ const projects = [
     stack:
       "Flutter, Laravel, MySQL, Firebase Cloud Functions, Clean Architecture",
     link: "https://bankmaster.com.mx",
+    caseStudy: null,
   },
 ]
 
@@ -52,16 +56,32 @@ export default function Projects() {
       <h2 className="text-3xl font-bold mb-12">Selected Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((p) => (
-          <a
+          <div
             key={p.name}
-            href={p.link}
-            target="_blank"
             className="border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition"
           >
             <h3 className="text-xl font-semibold">{p.name}</h3>
             <p className="mt-3 text-gray-400">{p.description}</p>
             <p className="mt-4 text-sm text-gray-500">{p.stack}</p>
-          </a>
+            <div className="mt-5 flex gap-4 text-sm">
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition"
+              >
+                Visit ↗
+              </a>
+              {p.caseStudy && (
+                <a
+                  href={p.caseStudy}
+                  className="text-white hover:underline"
+                >
+                  Case study →
+                </a>
+              )}
+            </div>
+          </div>
         ))}
       </div>
     </section>
