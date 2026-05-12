@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Bitácora Digital — Ray Torres",
+  title: "Bitácora Digital | Ray Torres",
   description:
     "A full architectural overhaul of a production construction supervision platform: from a monolithic, brittle V1 to a multi-tenant SaaS with offline-first sync, immutable audit trails, and asynchronous document generation.",
 };
@@ -26,7 +26,7 @@ const stack = [
 const problems = [
   {
     title: "Sync failures & data loss",
-    body: "The sync mechanism sent a single monolithic JSON payload with Base64-encoded photos, often exceeding 20MB. On unstable connections, these payloads timed out mid-transfer. The mobile client had no way to detect partial success, so it either assumed everything went through or retried everything — causing duplicate records and silent data loss.",
+    body: "The sync mechanism sent a single monolithic JSON payload with Base64-encoded photos, often exceeding 20MB. On unstable connections, these payloads timed out mid-transfer. The mobile client had no way to detect partial success, so it either assumed everything went through or retried everything causing duplicate records and silent data loss.",
   },
   {
     title: "Broken multi-user collaboration",
@@ -69,12 +69,12 @@ const adrs = [
   {
     title: "Immutable versioning & marketplace",
     badge: "Data integrity",
-    body: "Checklists are legal documents. V2 never updates rows — every change creates a new version. A root_uuid groups lineage. valid_from/valid_until determine the authoritative version at any point in time. Master templates can be cloned into a buyer's organization as a marketplace primitive.",
+    body: "Checklists are legal documents. V2 never updates rows every change creates a new version. A root_uuid groups lineage. valid_from/valid_until determine the authoritative version at any point in time. Master templates can be cloned into a buyer's organization as a marketplace primitive.",
   },
   {
     title: "Contextual roles & permissions",
     badge: "Architecture",
-    body: "Org-level roles handled by Spatie, hydrated by middleware. Project-level duties live in a pivot table as permission sets — decoupled from org hierarchy. Admins can assign granular overrides per user without schema changes.",
+    body: "Org-level roles handled by Spatie, hydrated by middleware. Project-level duties live in a pivot table as permission sets decoupled from org hierarchy. Admins can assign granular overrides per user without schema changes.",
   },
   {
     title: "Async sync protocol with state machine",
@@ -84,7 +84,7 @@ const adrs = [
   {
     title: "Late binding for race conditions",
     badge: "Resilience",
-    body: 'Laravel Batch jobs run in parallel — child records may arrive before parent is persisted. Child jobs release back to queue with backoff until parent exists. Circuit-breaking after max retries logs a "Missing Dependency" error without corrupting state.',
+    body: 'Laravel Batch jobs run in parallel, child records may arrive before parent is persisted. Child jobs release back to queue with backoff until parent exists. Circuit-breaking after max retries logs a "Missing Dependency" error without corrupting state.',
   },
   {
     title: "Async PDF generation",
@@ -94,7 +94,7 @@ const adrs = [
   {
     title: "Firebase as identity proxy",
     badge: "Security",
-    body: "V1 used empty passwords for social auth. V2 uses Firebase Admin SDK to verify idTokens server-side. Social accounts have null passwords — native login attempts are blocked. Multi-device support via user_devices table.",
+    body: "V1 used empty passwords for social auth. V2 uses Firebase Admin SDK to verify idTokens server-side. Social accounts have null passwords, native login attempts are blocked. Multi-device support via user_devices table.",
   },
 ];
 
@@ -108,7 +108,7 @@ const badgeColor: Record<string, string> = {
 const outcomes = [
   {
     title: "Forensic-grade audit trail",
-    body: "Immutable checklists with full lineage tracking mean historical reports can never be retroactively altered — a hard requirement for government compliance use cases.",
+    body: "Immutable checklists with full lineage tracking mean historical reports can never be retroactively altered, a hard requirement for government compliance use cases.",
   },
   {
     title: "True offline-first sync",
@@ -116,7 +116,7 @@ const outcomes = [
   },
   {
     title: "SaaS-ready multitenancy",
-    body: "Onboarding a new municipality or professional association no longer requires code changes — it's a data operation.",
+    body: "Onboarding a new municipality or professional association no longer requires code changes, it's a data operation.",
   },
   {
     title: "Parallel delivery strategy",
@@ -176,12 +176,12 @@ export default function BitacoraPage() {
         <section className="mt-24">
           <h2 className="text-2xl font-bold mb-2">The problem</h2>
           <p className="text-gray-500 mb-10 italic">
-            `A system that worked — until it didn&#39;t`
+            `A system that worked, until it didn&#39;t`
           </p>
           <p className="text-gray-400 mb-10">
             Bitácora Digital is used by construction supervisors, municipal
             inspectors, and private firms to document site visits, checklists,
-            and compliance records in real time — often in locations with no
+            and compliance records in real time, often in locations with no
             internet. The V1 system had been in production for years and
             accumulated real usage, but three structural problems had become
             impossible to ignore.
@@ -202,7 +202,7 @@ export default function BitacoraPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="border border-gray-800 rounded-xl p-6">
               <p className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-widest">
-                Before — V1
+                Before V1
               </p>
               <ul className="space-y-2">
                 {v1.map((item) => (
@@ -214,7 +214,7 @@ export default function BitacoraPage() {
             </div>
             <div className="border border-gray-700 rounded-xl p-6">
               <p className="text-sm font-semibold text-gray-400 mb-4 uppercase tracking-widest">
-                After — V2
+                After V2
               </p>
               <ul className="space-y-2">
                 {v2.map((item) => (
@@ -281,7 +281,7 @@ export default function BitacoraPage() {
         {/* Reflection */}
         <section className="mt-24 border-t border-gray-800 pt-16">
           <blockquote className="text-xl text-gray-300 italic leading-relaxed">
-            `The hardest part wasn&#39;t the technology — it was making decisions
+            `The hardest part wasn&#39;t the technology, it was making decisions
             with incomplete information while keeping a live system running.
             Every ADR was a forced conversation with future-me about tradeoffs I
             couldn&#39;t undo.`
