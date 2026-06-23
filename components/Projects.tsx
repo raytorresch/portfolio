@@ -38,8 +38,8 @@ const projects: Project[] = [
     name: "LicenciasZac",
     subtitle: "Professional associations platform · Zacatecas",
     description:
-      "Built for four professional associations in Zacatecas Ingenieros Civiles, Arquitectos, Mecánicos Electricistas, and Restauradores. Handles everything from generating identification cards for construction projects to tracking co-responsible parties, collecting membership dues, and maintaining professional records. The Colegio de Ingenieros Civiles has collected $3.8M MXN in dues through it over four years.",
-    stats: "~250 users · ~1,200 folios",
+      "Built for four professional associations in Zacatecas — Ingenieros Civiles, Arquitectos, Mecánicos Electricistas, and Restauradores. Handles identification cards, co-responsible party tracking, membership dues collection, and professional records. Across the three active billing colegios the platform has processed $6.1M MXN in dues.",
+    stats: "368 users · 9,121 folios · $6.1M MXN collected",
     stack: "Multi-tenant · Document generation · Payments",
     link: "https://consultas.licenciaszac.org/index.html",
     caseStudy: null,
