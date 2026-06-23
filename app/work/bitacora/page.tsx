@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -8,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const metrics = [
-  { label: "Photographic reports in DB", value: "37,100+" },
-  { label: "Organic users (Firebase Auth)", value: "~1,500" },
-  { label: "Meeting minutes", value: "551" },
-  { label: "Backend + frontend refactor", value: "2 months" },
+  { label: "Photographic reports in DB", value: "38,519" },
+  { label: "Users (Firebase Auth)", value: "2,948" },
+  { label: "Meeting minutes", value: "581" },
+  { label: "Projects", value: "3,590" },
 ];
 
 const stack = [
@@ -57,7 +58,7 @@ const v2 = [
   "Immutable versioning with full lineage",
   "Queue-based PDF with signed URL delivery",
   "Firebase Admin SDK identity proxy",
-  "Modern SPA (staging)",
+  "Next.js web frontend (Stage 1 complete)",
 ];
 
 const adrs = [
@@ -96,6 +97,16 @@ const adrs = [
     badge: "Security",
     body: "V1 used empty passwords for social auth. V2 uses Firebase Admin SDK to verify idTokens server-side. Social accounts have null passwords, native login attempts are blocked. Multi-device support via user_devices table.",
   },
+  {
+    title: "Paywall integration: Stripe + RevenueCat",
+    badge: "Monetization",
+    body: "Mobile subscriptions handled by RevenueCat (App Store + Play Store); web subscriptions via Stripe. Channel-based split keeps platform policy compliance while maintaining a single source of truth for subscription state in the backend.",
+  },
+  {
+    title: "RevenueCat webhook sync",
+    badge: "Resilience",
+    body: "INITIAL_PURCHASE, RENEWAL, and EXPIRATION events dispatch async jobs that update organization subscription state. Every webhook is persisted in rc_webhook_logs before processing. A 3-day grace period on expiration prevents hard cutoffs on delayed renewals.",
+  },
 ];
 
 const badgeColor: Record<string, string> = {
@@ -103,6 +114,7 @@ const badgeColor: Record<string, string> = {
   "Data integrity": "border-yellow-800 text-yellow-400",
   Resilience: "border-green-800 text-green-400",
   Security: "border-red-800 text-red-400",
+  Monetization: "border-purple-800 text-purple-400",
 };
 
 const outcomes = [
@@ -120,7 +132,7 @@ const outcomes = [
   },
   {
     title: "Parallel delivery strategy",
-    body: "V1 remained in production throughout the entire refactor. V2 was developed in a separate staging environment, keeping ~1,500 active users unaffected.",
+    body: "V1 remained in production throughout the entire refactor. V2 was developed in a separate staging environment, keeping 2,948 active users unaffected.",
   },
 ];
 
@@ -170,6 +182,31 @@ export default function BitacoraPage() {
               <p className="mt-1 text-xs text-gray-500">{m.label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Screenshots */}
+        <div className="mt-16 grid grid-cols-3 gap-4">
+          <Image
+            src="/screenshots/bitacora-projects.jpeg"
+            alt="Bitácora Digital — project list"
+            width={360}
+            height={748}
+            className="rounded-xl w-full"
+          />
+          <Image
+            src="/screenshots/bitacora-inspecciones.jpeg"
+            alt="Bitácora Digital — inspections"
+            width={360}
+            height={748}
+            className="rounded-xl w-full"
+          />
+          <Image
+            src="/screenshots/bitacora-minutas.jpeg"
+            alt="Bitácora Digital — meeting minutes"
+            width={360}
+            height={748}
+            className="rounded-xl w-full"
+          />
         </div>
 
         {/* The Problem */}
@@ -290,8 +327,9 @@ export default function BitacoraPage() {
 
         {/* Footer note */}
         <p className="mt-12 text-sm text-gray-600">
-          V2 currently in staging. Mobile refactor in progress. V3 roadmap
-          includes migration to private storage with signed URLs (ADR 0008).
+          Stage 1 complete: backend, mobile app, and Next.js frontend refactored
+          and in staging. Production migration in progress. V3 roadmap includes
+          migration to private storage with signed URLs (ADR 0008).
         </p>
 
         {/* Back bottom */}
