@@ -15,8 +15,8 @@ const projects: Project[] = [
     name: "Ventanilla Virtual Guanajuato",
     subtitle: "Construction permit management platform · Guanajuato",
     description:
-      "Started on the engineering team building this construction permit platform for the state of Guanajuato. As the project matured, my role shifted toward technical coordination acting as the bridge between stakeholders and the dev team, tracking incidents, and directing resolution efforts. Nearly 10,000 users process permits through it today.",
-    stats: "9,984 users · 53,446 licenses processed",
+      "Started on the engineering team building this construction permit platform for the state of Guanajuato. As the project matured, my role shifted toward technical coordination acting as the bridge between stakeholders and the dev team, tracking incidents, and directing resolution efforts. Nearly 10,000 users process permits through it today, facilitating $42.6M MXN in municipal revenue collection over 5 years in production.",
+    stats: "9,984 users · 53,446 licenses processed · $42.6M MXN in municipal revenue",
     stack: "Laravel, MySQL, AngularJS",
     link: "https://ventanillavirtualguanajuato.net/",
     caseStudy: null,
@@ -38,8 +38,8 @@ const projects: Project[] = [
     name: "LicenciasZac",
     subtitle: "Professional associations platform · Zacatecas",
     description:
-      "Built for four professional associations in Zacatecas — Ingenieros Civiles, Arquitectos, Mecánicos Electricistas, and Restauradores. Handles identification cards, co-responsible party tracking, membership dues collection, and professional records. Across the three active billing colegios the platform has processed $6.1M MXN in dues.",
-    stats: "368 users · 9,121 folios · $6.1M MXN collected",
+      "Built for four professional associations in Zacatecas — Ingenieros Civiles, Arquitectos, Mecánicos Electricistas, and Restauradores. Handles identification cards, co-responsible party tracking, membership dues collection, and professional records. The platform has facilitated $12.1M MXN in dues collection over 3 years.",
+    stats: "368 users · 9,121 folios · $12.1M MXN collected",
     stack: "Multi-tenant · Document generation · Payments",
     link: "https://consultas.licenciaszac.org/index.html",
     caseStudy: null,
@@ -48,8 +48,8 @@ const projects: Project[] = [
     name: "Celaya Construction Permit System",
     subtitle: "Municipal construction licensing platform",
     description:
-      "One of my first GovTech projects. Built the backend and frontend integration for Celaya's municipal permit system where inspectors and staff process construction and urban development applications end to end. It's been running in production for years.",
-    stats: "632 users · 10,666 licenses processed",
+      "One of my first GovTech projects. Built the backend and frontend integration for Celaya's municipal permit system where inspectors and staff process construction and urban development applications end to end. It's facilitated $66.6M MXN in municipal revenue collection over 5 years in production.",
+    stats: "632 users · 10,666 licenses processed · $66.6M MXN in municipal revenue",
     stack: "MySQL, REST APIs, CodeIgniter, AngularJS",
     link: "https://celaya.drosmexico.com/index.html",
     caseStudy: null,

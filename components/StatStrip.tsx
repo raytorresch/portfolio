@@ -2,7 +2,7 @@ const stats = [
   { value: "14,000+", label: "Active users across 6 production platforms" },
   { value: "73,000+", label: "Permits, licenses & folios processed" },
   { value: "38,500+", label: "Photographic reports in production (Bitácora Digital)" },
-  { value: "$6.1M MXN", label: "Collected in dues across professional associations through a platform I built" },
+  { value: "$121M+ MXN", label: "Facilitated in municipal revenue & association dues collection across platforms" },
 ];
 
 export default function StatStrip() {
