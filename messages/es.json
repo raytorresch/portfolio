@@ -1,4 +1,23 @@
 {
+  "metadata": {
+    "title": "Ray Torres – Ingeniero Mobile & Backend",
+    "description": "Ingeniero Mobile & Backend especializado en Flutter, Firebase, Laravel y Go. Construyo apps y sistemas de nivel producción para gobiernos y startups.",
+    "keywords": [
+      "Desarrollador Flutter",
+      "Desarrollador Firebase",
+      "Backend Laravel",
+      "Backend Go",
+      "Desarrollador de Apps Móviles",
+      "Ingeniero de Software Senior"
+    ],
+    "openGraph": {
+      "title": "Ray Torres – Ingeniero Senior Flutter & Backend",
+      "description": "Construyo sistemas móviles y backend de nivel producción usados por gobiernos y startups.",
+      "imageAlt": "Ray Torres – Ingeniero Senior",
+      "locale": "es_MX"
+    }
+  },
+
   "hero": {
     "name": "Ray Torres",
     "title": "Ingeniero Full-Stack",
@@ -8,7 +27,7 @@
   },
 
   "stats": [
-    { "value": "14,000+", "label": "Usuarios activos en 7 plataformas" },
+    { "value": "14,000+", "label": "Usuarios activos en 6 plataformas" },
     { "value": "73,000+", "label": "Permisos y licencias procesados" },
     { "value": "38,500+", "label": "Reportes fotográficos en producción" },
     { "value": "$121M+ MXN", "label": "En recaudación gubernamental gestionada" }
@@ -42,7 +61,7 @@
           { "value": "53,446", "label": "Licencias procesadas" },
           { "value": "$42.6M MXN", "label": "En recaudación estatal" }
         ],
-        "tags": ["Coordinación Técnica", "Gestión de Stakeholders", "Integración de Pagos", "Seguimiento de Incidencias"],
+        "tags": ["Laravel", "AngularJS", "MySQL", "Coordinación Técnica", "Gestión de Stakeholders", "Integración de Pagos", "Seguimiento de Incidencias"],
         "links": {
           "visit": "https://ventanillavirtualguanajuato.net/"
         }
@@ -91,7 +110,7 @@
       {
         "id": "permisos-zacatecas",
         "name": "Permisos Capital de Zacatecas",
-        "description": "Plataforma de gestión de permisos de construcción para el municipio capital de Zacatecas. Coordiné la integración de tres sistemas críticos: el catálogo de costos nativo del municipio, la pasarela de pago de BBVA (banco del municipio) y la API de firmas digitales para la autorización legal de licencias. Esto implicó mantener integridad de datos entre la plataforma, la base de datos de finanzas municipales y el sistema de firmas de forma simultánea. La plataforma está actualmente fuera de línea a petición del cliente.",
+        "description": "Plataforma de gestión de permisos de construcción para el municipio capital de Zacatecas. Coordiné la integración de tres sistemas críticos: el catálogo de costos nativo del municipio, la pasarela de pago de BBVA (banco del municipio) y la API de firmas digitales para la autorización legal de licencias. Esto implicó mantener integridad de datos entre la plataforma, la base de datos de finanzas municipales y el sistema de firmas de forma simultánea. La plataforma está actualmente fuera de línea debido a un cambio en la administración municipal, algo usual cuando el gobierno local migra su infraestructura digital.",
         "stats": [],
         "tags": ["Laravel", "MySQL", "Integración de Pagos", "Firmas Digitales", "Coordinación Técnica"],
         "links": {}
@@ -120,12 +139,11 @@
   },
 
   "proof": {
-    "sectionTitle": "Evidencia de Trabajo",
+    "sectionTitle": "Actualmente",
     "items": [
-      "14,000+ usuarios activos en 7 plataformas gubernamentales y de colegios profesionales en producción",
-      "73,000+ permisos y licencias procesados de principio a fin",
-      "$121M+ MXN en recaudación gubernamental gestionada a través de plataformas que construyo y mantengo",
-      "Único responsable técnico de arquitectura en un despliegue GovTech activo"
+      "Construyendo una Plataforma de Firma Digital. 7 microservicios en Go, Python y SoftHSM para firmas electrónicas con validez legal en documentos gubernamentales",
+      "Estudiando para la certificación AWS Cloud Practitioner",
+      "Único responsable técnico en cada proyecto activo, arquitectura, desarrollo y despliegue, con coordinación directa con bancos, sistemas de finanzas gubernamentales y equipos de ingeniería externos"
     ]
   },
 

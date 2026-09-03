@@ -1,4 +1,23 @@
 {
+  "metadata": {
+    "title": "Ray Torres – Mobile & Backend Engineer",
+    "description": "Mobile & Backend Engineer specializing in Flutter, Firebase, Laravel, and Go. Building production-grade apps and systems for governments and startups.",
+    "keywords": [
+      "Flutter Developer",
+      "Firebase Developer",
+      "Laravel Backend",
+      "Go Backend",
+      "Mobile App Developer",
+      "Senior Software Engineer"
+    ],
+    "openGraph": {
+      "title": "Ray Torres – Senior Flutter & Backend Engineer",
+      "description": "I build production-grade mobile and backend systems used by governments and startups.",
+      "imageAlt": "Ray Torres – Senior Engineer",
+      "locale": "en_US"
+    }
+  },
+
   "hero": {
     "name": "Ray Torres",
     "title": "Full-Stack Engineer",
@@ -8,7 +27,7 @@
   },
 
   "stats": [
-    { "value": "14,000+", "label": "Active users across 7 platforms" },
+    { "value": "14,000+", "label": "Active users across 6 platforms" },
     { "value": "73,000+", "label": "Permits & licenses processed" },
     { "value": "38,500+", "label": "Photo reports in production" },
     { "value": "$121M+ MXN", "label": "In government revenue processed" }
@@ -42,7 +61,7 @@
           { "value": "53,446", "label": "Licenses processed" },
           { "value": "$42.6M MXN", "label": "In state revenue" }
         ],
-        "tags": ["Technical Coordination", "Stakeholder Management", "Payment Integration", "Incident Tracking"],
+        "tags": ["Laravel", "AngularJS", "MySQL", "Technical Coordination", "Stakeholder Management", "Payment Integration", "Incident Tracking"],
         "links": {
           "visit": "https://ventanillavirtualguanajuato.net/"
         }
@@ -91,7 +110,7 @@
       {
         "id": "permisos-zacatecas",
         "name": "Permisos Capital de Zacatecas",
-        "description": "Construction permit platform for the capital municipality of Zacatecas. I coordinated the integration of three critical systems: the municipality's native cost catalog, BBVA's payment gateway (the municipality's bank), and a digital signature API for legal permit authorization. This required maintaining data integrity across the platform, the municipal finance database, and the signature system simultaneously. The platform is currently offline at the client's request.",
+        "description": "Construction permit platform for the capital municipality of Zacatecas. I coordinated the integration of three critical systems: the municipality's native cost catalog, BBVA's payment gateway (the municipality's bank), and a digital signature API for legal permit authorization. This required maintaining data integrity across the platform, the municipal finance database, and the signature system simultaneously. The platform is currently offline following a change in municipal administration, a common occurrence when new local governments transition their digital infrastructure.",
         "stats": [],
         "tags": ["Laravel", "MySQL", "Payment Integration", "Digital Signatures", "Technical Coordination"],
         "links": {}
@@ -120,12 +139,11 @@
   },
 
   "proof": {
-    "sectionTitle": "Proof of Work",
+    "sectionTitle": "Currently",
     "items": [
-      "14,000+ active users across 7 government and professional-association platforms in production",
-      "73,000+ permits and licenses processed end to end",
-      "$121M+ MXN in government revenue processed through platforms I built and maintain",
-      "Sole engineer responsible for systems architecture in an active GovTech deployment"
+      "Building a Digital Signature Platform. 7 microservices in Go, Python, and SoftHSM for legally-valid electronic signatures on government documents",
+      "Studying for AWS Cloud Practitioner certification",
+      "Sole technical owner across every active project architecture, development, and deployment, with direct coordination across banks, government finance systems, and external engineering teams"
     ]
   },
 
