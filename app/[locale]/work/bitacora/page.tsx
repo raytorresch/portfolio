@@ -53,7 +53,7 @@ function BitacoraContent() {
   const outcomes = t.raw("outcomes.items") as NamedItem[];
 
   return (
-    <div className="flex min-h-screen justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex min-h-screen justify-center bg-black font-sans">
       <main className="w-full max-w-3xl px-16 py-32">
         {/* Back */}
         <Link
