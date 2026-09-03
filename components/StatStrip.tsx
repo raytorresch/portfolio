@@ -1,11 +1,11 @@
-const stats = [
-  { value: "14,000+", label: "Active users across 6 production platforms" },
-  { value: "73,000+", label: "Permits, licenses & folios processed" },
-  { value: "38,500+", label: "Photographic reports in production (Bitácora Digital)" },
-  { value: "$121M+ MXN", label: "Facilitated in municipal revenue & association dues collection across platforms" },
-];
+import { useTranslations } from "next-intl";
+
+type Stat = { value: string; label: string };
 
 export default function StatStrip() {
+  const t = useTranslations();
+  const stats = t.raw("stats") as Stat[];
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pb-16">
       {stats.map((s) => (
