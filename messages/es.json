@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "name": "Ray Torres",
+    "title": "Ingeniero Full-Stack",
+    "subtitle": "Backend (Laravel, Go) & Mobile (Flutter)",
+    "description": "Lidero sistemas en producción de principio a fin, desde la arquitectura hasta el despliegue, como único responsable técnico. Mi trabajo abarca plataformas gubernamentales, sistemas de permisos y herramientas de gestión documental integradas con pasarelas de pago, APIs bancarias y equipos externos, en proyectos donde el margen de error en producción es cero.",
+    "tags": ["Sistemas gubernamentales", "Backend + Mobile", "Integraciones"]
+  },
+
+  "stats": [
+    { "value": "14,000+", "label": "Usuarios activos en 7 plataformas" },
+    { "value": "73,000+", "label": "Permisos y licencias procesados" },
+    { "value": "38,500+", "label": "Reportes fotográficos en producción" },
+    { "value": "$121M+ MXN", "label": "En recaudación gubernamental gestionada" }
+  ],
+
+  "projects": {
+    "sectionTitle": "Proyectos Seleccionados",
+    "items": [
+      {
+        "id": "bitacora",
+        "name": "Bitácora Digital",
+        "description": "Sistema móvil y web utilizado para supervisar obras de construcción públicas y privadas. Inspectores y supervisores registran visitas de campo, evidencia fotográfica y cumplimiento normativo en tiempo real. Lideré el refactor arquitectónico completo — reconstruyendo la app Flutter y el backend Laravel + Firebase — sin interrumpir el servicio para los usuarios activos. La versión refactorizada está en staging, lista para migrar a producción.",
+        "stats": [
+          { "value": "~3,000", "label": "Usuarios activos" },
+          { "value": "38,500+", "label": "Reportes fotográficos" },
+          { "value": "581", "label": "Minutas de obra" },
+          { "value": "3,590", "label": "Proyectos registrados" }
+        ],
+        "tags": ["Flutter", "Laravel", "Firebase", "MySQL", "Clean Architecture", "REST APIs"],
+        "links": {
+          "visit": "https://bitacoradigital.com.mx",
+          "caseStudy": "/work/bitacora"
+        }
+      },
+      {
+        "id": "guanajuato",
+        "name": "Ventanilla Virtual Guanajuato",
+        "description": "Plataforma de gestión de permisos de construcción con casi 10,000 usuarios activos, 53,446 licencias procesadas y $42.6M MXN recaudados por el estado en 5 años de producción. Coordiné la integración de pagos con CapitalNet, sincronizando flujos de cobro y confirmación vía webhooks. Mi rol evolucionó del desarrollo inicial a coordinación técnica directa con stakeholders estatales: gestión de comunicación, seguimiento de incidencias y dirección del equipo de desarrollo.",
+        "stats": [
+          { "value": "~10,000", "label": "Usuarios activos" },
+          { "value": "53,446", "label": "Licencias procesadas" },
+          { "value": "$42.6M MXN", "label": "En recaudación estatal" }
+        ],
+        "tags": ["Coordinación Técnica", "Gestión de Stakeholders", "Integración de Pagos", "Seguimiento de Incidencias"],
+        "links": {
+          "visit": "https://ventanillavirtualguanajuato.net/"
+        }
+      },
+      {
+        "id": "licenciaszac",
+        "name": "LicenciasZac",
+        "description": "Plataforma SaaS multi-tenant para la gestión de membresías y licencias de 4 colegios profesionales en Zacatecas: ingenieros, arquitectos, mecánicos electricistas y arquitectos restauradores. Gestiona generación de documentos, cuotas de colegiación, renovaciones de credencial y aislamiento completo de datos por organización. Desarrollada desde cero. $12.1M MXN en cuotas de colegiación gestionados a través de la plataforma.",
+        "stats": [
+          { "value": "368", "label": "Usuarios activos" },
+          { "value": "9,121", "label": "Folios emitidos" },
+          { "value": "$12.1M MXN", "label": "En cuotas gestionadas" }
+        ],
+        "tags": ["Laravel", "MySQL", "Arquitectura Multi-tenant", "Generación de Documentos", "Pagos"],
+        "links": {
+          "visit": "https://consultas.licenciaszac.org/index.html"
+        }
+      },
+      {
+        "id": "celaya",
+        "name": "Licencias de Construcción de Celaya",
+        "description": "Plataforma en producción utilizada diariamente por el municipio de Celaya para gestionar permisos de construcción y desarrollo urbano — 632 usuarios, 10,666 licencias procesadas y $66.6M MXN en recaudación municipal en 5 años. Desarrollé las APIs REST en PHP y MySQL y las integré con el frontend en AngularJS. Coordiné la integración de la pasarela de pago de BanBajío y la sincronización de registros con la base de datos de finanzas municipales.",
+        "stats": [
+          { "value": "632", "label": "Usuarios" },
+          { "value": "10,666", "label": "Licencias procesadas" },
+          { "value": "$66.6M MXN", "label": "En recaudación municipal" }
+        ],
+        "tags": ["PHP", "MySQL", "REST API", "Integración de Pagos"],
+        "links": {
+          "visit": "https://celaya.drosmexico.com/index.html"
+        }
+      },
+      {
+        "id": "guadalupe",
+        "name": "Licencias Guadalupe",
+        "description": "Plataforma municipal para la gestión de permisos de construcción y desarrollo urbano en Guadalupe, Zacatecas. Lideré el desarrollo del sistema completo: backend, modelo de datos e integración del frontend.",
+        "stats": [
+          { "value": "481", "label": "Usuarios" },
+          { "value": "596", "label": "Licencias procesadas" }
+        ],
+        "tags": ["Laravel", "MySQL", "REST API"],
+        "links": {
+          "visit": "https://guadalupe.licenciaszac.net/"
+        }
+      },
+      {
+        "id": "permisos-zacatecas",
+        "name": "Permisos Capital de Zacatecas",
+        "description": "Plataforma de gestión de permisos de construcción para el municipio capital de Zacatecas. Coordiné la integración de tres sistemas críticos: el catálogo de costos nativo del municipio, la pasarela de pago de BBVA (banco del municipio) y la API de firmas digitales para la autorización legal de licencias. Esto implicó mantener integridad de datos entre la plataforma, la base de datos de finanzas municipales y el sistema de firmas de forma simultánea. La plataforma está actualmente fuera de línea a petición del cliente.",
+        "stats": [],
+        "tags": ["Laravel", "MySQL", "Integración de Pagos", "Firmas Digitales", "Coordinación Técnica"],
+        "links": {}
+      },
+      {
+        "id": "adoptable",
+        "name": "Adoptable",
+        "description": "Aplicación móvil diseñada para simplificar la adopción de mascotas conectando refugios y adoptantes en una sola plataforma. Desarrollada con clean architecture y BLoC. MVP completo disponible como showcase en GitHub.",
+        "stats": [],
+        "tags": ["Flutter", "Firebase", "BLoC", "Clean Architecture"],
+        "links": {
+          "visit": "https://adoptable-landing.vercel.app"
+        }
+      },
+      {
+        "id": "bankmaster",
+        "name": "BankMaster",
+        "description": "Aplicación móvil para la gestión de apuestas deportivas: usuarios, apuestas y seguimiento financiero. Desarrollé la app Flutter y el backend Laravel de principio a fin — desde la arquitectura hasta el despliegue en Google Play, incluyendo localización (l10n) y suscripciones con RevenueCat.",
+        "stats": [],
+        "tags": ["Flutter", "Laravel", "MySQL", "Firebase", "RevenueCat", "Clean Architecture"],
+        "links": {
+          "visit": "https://bankmaster.com.mx"
+        }
+      }
+    ]
+  },
+
+  "proof": {
+    "sectionTitle": "Evidencia de Trabajo",
+    "items": [
+      "14,000+ usuarios activos en 7 plataformas gubernamentales y de colegios profesionales en producción",
+      "73,000+ permisos y licencias procesados de principio a fin",
+      "$121M+ MXN en recaudación gubernamental gestionada a través de plataformas que construyo y mantengo",
+      "Único responsable técnico de arquitectura en un despliegue GovTech activo"
+    ]
+  },
+
+  "contact": {
+    "sectionTitle": "Trabajemos juntos",
+    "email": "ray.torres.dev@gmail.com",
+    "links": {
+      "linkedin": {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ray-torres-4004b0153/"
+      },
+      "upwork": {
+        "label": "Upwork",
+        "text": "Ver perfil",
+        "url": "https://www.upwork.com/freelancers/~011d1809efcaa7da80"
+      }
+    }
+  }
+}

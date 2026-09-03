@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Bitácora Digital | Ray Torres",
+    "description": "Una refactorización arquitectónica completa de una plataforma de supervisión de construcción en producción: de un monolito frágil a un SaaS multi-tenant con sincronización offline-first, trazabilidad inmutable y generación asíncrona de documentos."
+  },
+
+  "nav": {
+    "back": "Volver",
+    "backToPortfolio": "Volver al portafolio"
+  },
+
+  "header": {
+    "title": "Bitácora Digital",
+    "subtitle": "Rescatar y modernizar una plataforma GovTech heredada",
+    "description": "Una refactorización arquitectónica completa de una plataforma de supervisión de construcción en producción: de un monolito frágil a un SaaS multi-tenant con sincronización offline-first, trazabilidad inmutable y generación asíncrona de documentos.",
+    "tags": ["Flutter", "Laravel", "Firebase", "MySQL", "DigitalOcean Spaces", "Clean Architecture"]
+  },
+
+  "stats": [
+    { "value": "38,519", "label": "Reportes fotográficos en DB" },
+    { "value": "2,948",  "label": "Usuarios (Firebase Auth)" },
+    { "value": "581",    "label": "Minutas de obra" },
+    { "value": "3,590",  "label": "Proyectos" }
+  ],
+
+  "problem": {
+    "sectionTitle": "El problema",
+    "tagline": "Un sistema que funcionaba, hasta que dejó de hacerlo",
+    "intro": "Bitácora Digital es utilizada por supervisores de construcción, inspectores municipales y empresas privadas para documentar visitas de obra, listas de verificación y registros de cumplimiento en tiempo real, frecuentemente en lugares sin internet. La V1 llevaba años en producción con uso real acumulado, pero tres problemas estructurales se habían vuelto imposibles de ignorar.",
+    "items": [
+      {
+        "title": "Fallos de sincronización y pérdida de datos",
+        "description": "El mecanismo de sincronización enviaba un payload JSON monolítico con fotos codificadas en Base64, frecuentemente superando los 20MB. En conexiones inestables, estos payloads fallaban a mitad de la transferencia. El cliente móvil no podía detectar éxito parcial, por lo que asumía que todo había pasado o reintentaba todo, generando registros duplicados y pérdida silenciosa de datos."
+      },
+      {
+        "title": "Colaboración multi-usuario rota",
+        "description": "Para colaborar en un proyecto entre organizaciones, los usuarios necesitaban credenciales separadas para cada contexto. Los roles estaban hardcodeados como flags enteros. Agregar un supervisor de otra empresa a un proyecto requería workarounds en lugar de un modelo de permisos de primera clase."
+      },
+      {
+        "title": "Extensibilidad nula",
+        "description": "Cada vez que un nuevo municipio o colegio profesional necesitaba incorporarse, el código requería modificación directa. No existía el concepto de organizaciones como entidades de primera clase, ni aislamiento de tenant, ni mecanismo para gestionar o comercializar plantillas de checklists entre clientes."
+      }
+    ]
+  },
+
+  "comparison": {
+    "sectionTitle": "V1 vs V2",
+    "before": {
+      "label": "Antes V1",
+      "items": [
+        "Recursos propios del usuario",
+        "Roles como columnas enteras (id_tipo)",
+        "Modelo de proyecto con un solo propietario",
+        "Sincronización monolítica (Base64 + JSON)",
+        "Checklists mutables (sin trazabilidad)",
+        "Generación de PDF síncrona",
+        "Auth social con contraseñas vacías",
+        "Frontend en AngularJS"
+      ]
+    },
+    "after": {
+      "label": "Después V2",
+      "items": [
+        "Datos propiedad de la organización (multi-tenant)",
+        "Roles Spatie + conjuntos de permisos por proyecto",
+        "Colaboración multi-stakeholder vía pivot",
+        "Sync asíncrono desacoplado (UUIDs + máquina de estados)",
+        "Versionado inmutable con linaje completo",
+        "PDF por cola con entrega por URL firmada",
+        "Firebase Admin SDK como proxy de identidad",
+        "Frontend en Next.js (Etapa 1 completa)"
+      ]
+    }
+  },
+
+  "adrs": {
+    "sectionTitle": "Decisiones de arquitectura",
+    "intro": "Cada decisión está documentada como un ADR en el",
+    "repoLabel": "repositorio público",
+    "repoUrl": "https://github.com/raytorresch/bitacora-architecture",
+    "items": [
+      {
+        "title": "Multitenancy basado en organizaciones",
+        "tag": "Arquitectura",
+        "description": "Se introdujo un modelo Organization como propietario raíz de todos los datos. Laravel Global Scopes aplican el aislamiento de tenant de forma transparente. Los usuarios pertenecen a múltiples organizaciones mediante un pivot, resolviendo el problema de credenciales múltiples sin migrar cuentas."
+      },
+      {
+        "title": "Versionado inmutable y marketplace",
+        "tag": "Integridad de datos",
+        "description": "Los checklists son documentos legales. V2 nunca actualiza filas, cada cambio crea una versión nueva. Un root_uuid agrupa el linaje. valid_from/valid_until determinan la versión autoritativa en cualquier punto del tiempo. Las plantillas maestras pueden clonarse en la organización de un comprador como primitiva de marketplace."
+      },
+      {
+        "title": "Roles y permisos contextuales",
+        "tag": "Arquitectura",
+        "description": "Los roles a nivel de organización son gestionados por Spatie e hidratados por middleware. Los permisos a nivel de proyecto viven en una tabla pivot como conjuntos de permisos desacoplados de la jerarquía organizacional. Los administradores pueden asignar overrides granulares por usuario sin cambios de esquema."
+      },
+      {
+        "title": "Protocolo de sync asíncrono con máquina de estados",
+        "tag": "Resiliencia",
+        "description": "Se reemplazó el payload monolítico de 20MB por un rompecabezas de UUIDs: los binarios suben por separado, los metadatos sincronizan como referencias UUID (~95% más pequeño). Una máquina de tres estados (ORPHAN > PENDING_BINARY > AVAILABLE) maneja llegadas no secuenciales. SyncSessions con manifiestos y checksums permiten recuperación granular."
+      },
+      {
+        "title": "Late binding para race conditions",
+        "tag": "Resiliencia",
+        "description": "Los jobs de Laravel Batch corren en paralelo, los registros hijo pueden llegar antes de que el padre esté persistido. Los jobs hijo se liberan de vuelta a la cola con backoff hasta que el padre exista. El circuit-breaking tras el máximo de reintentos registra un error Missing Dependency sin corromper el estado."
+      },
+      {
+        "title": "Generación de PDF asíncrona",
+        "tag": "Arquitectura",
+        "description": "Los reportes complejos causaban timeouts en V1. V2 despacha GenerateReportJob a la cola en segundo plano. El frontend consulta el UUID del job por su estado y recibe una URL firmada temporal al completarse."
+      },
+      {
+        "title": "Firebase como proxy de identidad",
+        "tag": "Seguridad",
+        "description": "V1 usaba contraseñas vacías para auth social. V2 usa Firebase Admin SDK para verificar idTokens del lado del servidor. Las cuentas sociales tienen contraseñas nulas, los intentos de login nativo quedan bloqueados. Soporte multi-dispositivo mediante tabla user_devices."
+      },
+      {
+        "title": "Integración de paywall: Stripe + RevenueCat",
+        "tag": "Monetización",
+        "description": "Las suscripciones móviles son gestionadas por RevenueCat (App Store + Play Store); las suscripciones web por Stripe. La división por canal mantiene el cumplimiento de políticas de plataforma mientras conserva una única fuente de verdad para el estado de suscripción en el backend."
+      },
+      {
+        "title": "Sincronización de webhooks de RevenueCat",
+        "tag": "Resiliencia",
+        "description": "Los eventos INITIAL_PURCHASE, RENEWAL y EXPIRATION despachan jobs asíncronos que actualizan el estado de suscripción de la organización. Cada webhook se persiste en rc_webhook_logs antes de procesarse. Un período de gracia de 3 días en expiración evita cortes abruptos por renovaciones con retraso."
+      }
+    ]
+  },
+
+  "outcomes": {
+    "sectionTitle": "Resultados",
+    "items": [
+      {
+        "title": "Trazabilidad de nivel forense",
+        "description": "Los checklists inmutables con seguimiento de linaje completo impiden que los reportes históricos puedan alterarse retroactivamente, un requisito obligatorio para casos de uso de cumplimiento gubernamental."
+      },
+      {
+        "title": "Sincronización verdaderamente offline-first",
+        "description": "Los fallos de sync ya no causan pérdida de datos ni duplicados. Los inspectores en obras con conectividad deficiente reciben confirmación granular de exactamente qué registros sincronizaron y cuáles necesitan reintento."
+      },
+      {
+        "title": "Multitenancy listo para SaaS",
+        "description": "Incorporar un nuevo municipio o colegio profesional ya no requiere cambios en el código, es una operación de datos."
+      },
+      {
+        "title": "Estrategia de entrega en paralelo",
+        "description": "V1 permaneció en producción durante todo el refactor. V2 se desarrolló en un entorno de staging separado, manteniendo a 2,948 usuarios activos sin interrupciones."
+      }
+    ]
+  },
+
+  "closing": {
+    "quote": "Lo más difícil no fue la tecnología, sino tomar decisiones con información incompleta mientras mantenía el sistema funcionando. Cada ADR fue una conversación forzada con mi yo futuro sobre tradeoffs que no podría deshacer.",
+    "status": "Etapa 1 completa: backend, app móvil y frontend Next.js refactorizados y en staging. Migración a producción en curso. El roadmap V3 incluye migración a almacenamiento privado con URLs firmadas (ADR 0008)."
+  }
+}
