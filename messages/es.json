@@ -20,7 +20,7 @@
       {
         "id": "bitacora",
         "name": "Bitácora Digital",
-        "description": "Sistema móvil y web utilizado para supervisar obras de construcción públicas y privadas. Inspectores y supervisores registran visitas de campo, evidencia fotográfica y cumplimiento normativo en tiempo real. Lideré el refactor arquitectónico completo — reconstruyendo la app Flutter y el backend Laravel + Firebase — sin interrumpir el servicio para los usuarios activos. La versión refactorizada está en staging, lista para migrar a producción.",
+        "description": "Sistema móvil y web utilizado para supervisar obras de construcción públicas y privadas. Inspectores y supervisores registran visitas de campo, evidencia fotográfica y cumplimiento normativo en tiempo real. Lideré el refactor arquitectónico completo, reconstruyendo la app Flutter y el backend Laravel + Firebase; sin interrumpir el servicio para los usuarios activos. La versión refactorizada está en staging, lista para migrar a producción.",
         "stats": [
           { "value": "~3,000", "label": "Usuarios activos" },
           { "value": "38,500+", "label": "Reportes fotográficos" },
@@ -64,7 +64,7 @@
       {
         "id": "celaya",
         "name": "Licencias de Construcción de Celaya",
-        "description": "Plataforma en producción utilizada diariamente por el municipio de Celaya para gestionar permisos de construcción y desarrollo urbano — 632 usuarios, 10,666 licencias procesadas y $66.6M MXN en recaudación municipal en 5 años. Desarrollé las APIs REST en PHP y MySQL y las integré con el frontend en AngularJS. Coordiné la integración de la pasarela de pago de BanBajío y la sincronización de registros con la base de datos de finanzas municipales.",
+        "description": "Plataforma en producción utilizada diariamente por el municipio de Celaya para gestionar permisos de construcción y desarrollo urbano, 632 usuarios, 10,666 licencias procesadas y $66.6M MXN en recaudación municipal en 5 años. Desarrollé las APIs REST en PHP y MySQL y las integré con el frontend en AngularJS. Coordiné la integración de la pasarela de pago de BanBajío y la sincronización de registros con la base de datos de finanzas municipales.",
         "stats": [
           { "value": "632", "label": "Usuarios" },
           { "value": "10,666", "label": "Licencias procesadas" },
@@ -109,7 +109,7 @@
       {
         "id": "bankmaster",
         "name": "BankMaster",
-        "description": "Aplicación móvil para la gestión de apuestas deportivas: usuarios, apuestas y seguimiento financiero. Desarrollé la app Flutter y el backend Laravel de principio a fin — desde la arquitectura hasta el despliegue en Google Play, incluyendo localización (l10n) y suscripciones con RevenueCat.",
+        "description": "Aplicación móvil para la gestión de apuestas deportivas: usuarios, apuestas y seguimiento financiero. Desarrollé la app Flutter y el backend Laravel de principio a fin, desde la arquitectura hasta el despliegue en Google Play, incluyendo localización (l10n) y suscripciones con RevenueCat.",
         "stats": [],
         "tags": ["Flutter", "Laravel", "MySQL", "Firebase", "RevenueCat", "Clean Architecture"],
         "links": {

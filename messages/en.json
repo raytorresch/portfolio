@@ -20,7 +20,7 @@
       {
         "id": "bitacora",
         "name": "Bitácora Digital",
-        "description": "Mobile and web system used to supervise public and private construction projects. Inspectors and supervisors use the platform to track project progress, register site visits, and document compliance in real time. I led the full architectural refactor — rebuilding the Flutter app and the Laravel + Firebase backend — while keeping the live platform running for its existing users. The refactored version is in staging, ready for production rollout.",
+        "description": "Mobile and web system used to supervise public and private construction projects. Inspectors and supervisors use the platform to track project progress, register site visits, and document compliance in real time. I led the full architectural refactor, rebuilding the Flutter app and the Laravel + Firebase backend while keeping the live platform running for its existing users. The refactored version is in staging, ready for production rollout.",
         "stats": [
           { "value": "~3,000", "label": "Active users" },
           { "value": "38,500+", "label": "Photo reports" },
@@ -36,7 +36,7 @@
       {
         "id": "guanajuato",
         "name": "Ventanilla Virtual Guanajuato",
-        "description": "Construction permit platform serving nearly 10,000 users, with 53,446 licenses processed and $42.6M MXN in state revenue collected over 5 years in production. I coordinated the payment integration with CapitalNet, synchronizing billing and confirmation flows via webhooks. After the initial development phase, my role evolved into direct technical coordination with state stakeholders — managing communication, tracking incidents end to end, and directing the engineering team toward resolution.",
+        "description": "Construction permit platform serving nearly 10,000 users, with 53,446 licenses processed and $42.6M MXN in state revenue collected over 5 years in production. I coordinated the payment integration with CapitalNet, synchronizing billing and confirmation flows via webhooks. After the initial development phase, my role evolved into direct technical coordination with state stakeholders, managing communication, tracking incidents end to end, and directing the engineering team toward resolution.",
         "stats": [
           { "value": "~10,000", "label": "Active users" },
           { "value": "53,446", "label": "Licenses processed" },
@@ -50,7 +50,7 @@
       {
         "id": "licenciaszac",
         "name": "LicenciasZac",
-        "description": "Multi-tenant SaaS platform managing membership and licensing for 4 professional associations across Zacatecas — engineers, architects, mechanical-electrical engineers, and restoration architects. Handles document generation, member dues, credential renewals, and full data isolation per organization. Built end to end. $12.1M MXN in membership dues collected through the platform since launch.",
+        "description": "Multi-tenant SaaS platform managing membership and licensing for 4 professional associations across Zacatecas; engineers, architects, mechanical-electrical engineers, and restoration architects. Handles document generation, member dues, credential renewals, and full data isolation per organization. Built end to end. $12.1M MXN in membership dues collected through the platform since launch.",
         "stats": [
           { "value": "368", "label": "Active users" },
           { "value": "9,121", "label": "Folios issued" },
@@ -64,7 +64,7 @@
       {
         "id": "celaya",
         "name": "Celaya Construction Permit System",
-        "description": "Production platform used daily by the Municipality of Celaya to manage construction and urban development permits — 632 users, 10,666 licenses processed, and $66.6M MXN in municipal revenue channeled over 5 years. I built the REST APIs in PHP and MySQL and integrated them with the AngularJS frontend. I also coordinated the integration of BanBajio's payment gateway and the synchronization of records with the municipal finance database.",
+        "description": "Production platform used daily by the Municipality of Celaya to manage construction and urban development permits, 632 users, 10,666 licenses processed, and $66.6M MXN in municipal revenue channeled over 5 years. I built the REST APIs in PHP and MySQL and integrated them with the AngularJS frontend. I also coordinated the integration of BanBajio's payment gateway and the synchronization of records with the municipal finance database.",
         "stats": [
           { "value": "632", "label": "Users" },
           { "value": "10,666", "label": "Licenses processed" },
@@ -78,7 +78,7 @@
       {
         "id": "guadalupe",
         "name": "Licencias Guadalupe",
-        "description": "Municipal platform for managing construction and urban development permits in Guadalupe, Zacatecas. I led the development of the full system — backend, data model, and frontend integration.",
+        "description": "Municipal platform for managing construction and urban development permits in Guadalupe, Zacatecas. I led the development of the full system, backend, data model, and frontend integration.",
         "stats": [
           { "value": "481", "label": "Users" },
           { "value": "596", "label": "Licenses processed" }
@@ -109,7 +109,7 @@
       {
         "id": "bankmaster",
         "name": "BankMaster",
-        "description": "Mobile application for managing sports betting operations, including users, bets, and financial tracking. Built the Flutter app and Laravel backend end to end — from architecture to Google Play deployment, including localization (l10n) and subscription management with RevenueCat.",
+        "description": "Mobile application for managing sports betting operations, including users, bets, and financial tracking. Built the Flutter app and Laravel backend end to end, from architecture to Google Play deployment, including localization (l10n) and subscription management with RevenueCat.",
         "stats": [],
         "tags": ["Flutter", "Laravel", "MySQL", "Firebase", "RevenueCat", "Clean Architecture"],
         "links": {
