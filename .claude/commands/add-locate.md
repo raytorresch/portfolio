@@ -1,12 +1,8 @@
-## Commands
-
 ### /add-locale <locale>
 Adds a new locale to the site using next-intl.
-- Extracts all hardcoded strings from page.tsx and component files into 
-  messages/en.json if not already extracted.
-- Creates messages/<locale>.json with the same keys and placeholder values 
-  marked [TRANSLATE].
-- Does not translate content — translation is done manually or in a 
-  separate task.
-- Does not modify component logic beyond replacing hardcoded strings with 
-  t() calls.
+- Message files already exist under messages/ for EN and ES.
+- Configures next-intl routing and middleware for the new locale.
+- Replaces hardcoded strings in components with t() calls, using the
+  existing keys in messages/en.json as the reference.
+- Does not create or translate message files — that is done separately.
+- Does not modify component logic beyond replacing hardcoded strings.
