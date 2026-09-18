@@ -1,19 +1,19 @@
 {
   "metadata": {
-    "title": "Ray Torres – Mobile & Backend Engineer",
-    "description": "Mobile & Backend Engineer specializing in Flutter, Firebase, Laravel, and Go. Building production-grade apps and systems for governments and startups.",
+    "title": "Ray Torres - Full-Stack Engineer (Backend & Mobile)",
+    "description": "Full-Stack Engineer specializing in Backend (Laravel, Go) and Mobile (Flutter). Building production-grade systems for governments and regulated industries, integrated with banks and payment gateways.",
     "keywords": [
-      "Flutter Developer",
-      "Firebase Developer",
       "Laravel Backend",
       "Go Backend",
-      "Mobile App Developer",
+      "Full-Stack Engineer",
+      "Flutter Developer",
+      "GovTech Systems",
       "Senior Software Engineer"
     ],
     "openGraph": {
-      "title": "Ray Torres – Senior Flutter & Backend Engineer",
-      "description": "I build production-grade mobile and backend systems used by governments and startups.",
-      "imageAlt": "Ray Torres – Senior Engineer",
+      "title": "Ray Torres - Full-Stack Engineer (Backend & Mobile)",
+      "description": "I build production-grade backend and mobile systems used by governments and regulated industries.",
+      "imageAlt": "Ray Torres - Full-Stack Engineer",
       "locale": "en_US"
     }
   },
@@ -78,6 +78,16 @@
         "tags": ["Laravel", "MySQL", "Multi-tenant Architecture", "Document Generation", "Payments"],
         "links": {
           "visit": "https://consultas.licenciaszac.org/index.html"
+        }
+      },
+      {
+        "id": "ciczac",
+        "name": "CICZAC - Colegio de Ingenieros Civiles de Zacatecas",
+        "description": "Emergency rebuild of a third-party production system handling professional association members, document uploads, and admin verification (including government IDs), tax statements, and professional certificates. The existing system carried serious security debt: 777 permissions on directories with identity documents, plaintext passwords, SQL injection risks, and no separation of concerns. I redesigned the schema, implemented proper authentication and file permissions, and migrated all existing users and documents without data loss. From analysis to production in 3 days, with CI/CD on GitHub Actions adapted to the client's existing cPanel hosting.",
+        "stats": [],
+        "tags": ["Laravel", "Vue", "MySQL", "Security", "Data Migration", "CI/CD"],
+        "links": {
+          "visit": "https://ciczac.com/"
         }
       },
       {

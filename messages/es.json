@@ -1,19 +1,19 @@
 {
   "metadata": {
-    "title": "Ray Torres – Ingeniero Mobile & Backend",
-    "description": "Ingeniero Mobile & Backend especializado en Flutter, Firebase, Laravel y Go. Construyo apps y sistemas de nivel producción para gobiernos y startups.",
+    "title": "Ray Torres - Ingeniero Full-Stack (Backend & Mobile)",
+    "description": "Ingeniero Full-Stack especializado en Backend (Laravel, Go) y Mobile (Flutter). Construyo sistemas de nivel producción para gobiernos y sectores regulados, integrados con bancos y pasarelas de pago.",
     "keywords": [
-      "Desarrollador Flutter",
-      "Desarrollador Firebase",
       "Backend Laravel",
       "Backend Go",
-      "Desarrollador de Apps Móviles",
+      "Ingeniero Full-Stack",
+      "Desarrollador Flutter",
+      "Sistemas GovTech",
       "Ingeniero de Software Senior"
     ],
     "openGraph": {
-      "title": "Ray Torres – Ingeniero Senior Flutter & Backend",
-      "description": "Construyo sistemas móviles y backend de nivel producción usados por gobiernos y startups.",
-      "imageAlt": "Ray Torres – Ingeniero Senior",
+      "title": "Ray Torres - Ingeniero Full-Stack (Backend & Mobile)",
+      "description": "Construyo sistemas backend y móviles de nivel producción usados por gobiernos y sectores regulados.",
+      "imageAlt": "Ray Torres - Ingeniero Full-Stack",
       "locale": "es_MX"
     }
   },
@@ -78,6 +78,16 @@
         "tags": ["Laravel", "MySQL", "Arquitectura Multi-tenant", "Generación de Documentos", "Pagos"],
         "links": {
           "visit": "https://consultas.licenciaszac.org/index.html"
+        }
+      },
+      {
+        "id": "ciczac",
+        "name": "CICZAC – Colegio de Ingenieros Civiles de Zacatecas",
+        "description": "Reconstrucción de emergencia de un sistema de terceros en producción que gestiona miembros del colegio, carga de documentos y verificación administrativa (incluyendo identificaciones oficiales), constancias fiscales y certificados profesionales. El sistema existente arrastraba deuda de seguridad seria: permisos 777 en directorios con documentos de identidad, contraseñas sin cifrar, riesgo de inyección SQL y código sin separación de responsabilidades. Rediseñé el esquema, implementé autenticación y permisos de archivo correctos, y migré todos los usuarios y documentos existentes sin pérdida de datos. De análisis a producción en 3 días, con CI/CD en GitHub Actions adaptado al hosting cPanel existente del cliente.",
+        "stats": [],
+        "tags": ["Laravel", "Vue", "MySQL", "Seguridad", "Migración de Datos", "CI/CD"],
+        "links": {
+          "visit": "https://ciczac.com/"
         }
       },
       {
