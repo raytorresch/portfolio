@@ -37,6 +37,20 @@
     "sectionTitle": "Selected Projects",
     "items": [
       {
+        "id": "digital-signature",
+        "name": "Digital Signature Platform",
+        "description": "Sole backend architect of a multi-tenant SaaS platform where organizations act as their own certificate authority, issuing digital signatures for their departments and staff. Each tenant configures its own PKI hierarchy with no depth limit; the first client runs four levels. I designed and built all 7 microservices end to end: identity and sessions, HSM key custody, X.509 certificate issuance, PAdES document signing, verification, audit, and a purpose-built API gateway. The MVP runs on SoftHSM and freeTSA behind hexagonal ports, so moving to a cloud HSM, Vault, accredited certificates and a certified timestamp authority means swapping adapters, not rewriting services. I used Claude Code throughout for architecture review and implementation. Backend v1 is complete and running in sandbox, with production rollout for a municipal government pending final integration.",
+        "stats": [
+          { "value": "7", "label": "Microservices in 3 languages" },
+          { "value": "N levels", "label": "PKI hierarchy configurable per tenant" },
+          { "value": "PAdES", "label": "Multi-signer, RFC 3161 timestamps" }
+        ],
+        "tags": ["Node.js", "Python (FastAPI)", "Go", "MySQL", "Hexagonal Architecture", "SoftHSM", "Kubernetes", "GitHub Actions", "pyHanko", "JWT/JWKS"],
+        "links": {
+          "visit": "https://api.firmasdigitales.com.mx/swagger"
+        }
+      },
+      {
         "id": "bitacora",
         "name": "Bitácora Digital",
         "description": "Mobile and web system used to supervise public and private construction projects. Inspectors and supervisors use the platform to track project progress, register site visits, and document compliance in real time. I led the full architectural refactor, rebuilding the Flutter app and the Laravel + Firebase backend while keeping the live platform running for its existing users. The refactored version is in staging, ready for production rollout.",
