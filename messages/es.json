@@ -39,7 +39,7 @@
       {
         "id": "digital-signature",
         "name": "Plataforma de Firma Digital",
-        "description": "Único arquitecto backend de una plataforma SaaS multi-tenant donde cada organización opera como su propia autoridad certificadora y emite firmas digitales para sus áreas y personal. Cada tenant configura su propia jerarquía PKI sin límite de profundidad; el primer cliente usa cuatro niveles. Diseñé y construí los 7 microservicios de principio a fin: identidad y sesiones, custodia de llaves en HSM, emisión de certificados X.509, firma de documentos PAdES, verificación, auditoría y un API gateway propio. El MVP funciona con SoftHSM y freeTSA detrás de puertos hexagonales, así que migrar a un HSM en la nube, Vault, certificados acreditados y una TSA certificada implica cambiar adaptadores, no reescribir servicios. Usé Claude Code durante todo el desarrollo para revisión de arquitectura e implementación. El backend v1 está terminado y funcionando en sandbox, con la puesta en producción para un gobierno municipal pendiente de la integración final.",
+        "description": "Único arquitecto backend de una plataforma SaaS multi-tenant donde cada organización es su propia autoridad certificadora y firma para áreas y personal. Construí los 7 microservicios: identidad, custodia de llaves en HSM, emisión X.509, firma PAdES, verificación, auditoría y API gateway. Los puertos hexagonales permiten cambiar SoftHSM y freeTSA por un HSM en la nube y TSA certificada. Backend v1 terminado, en sandbox a la espera de producción.",
         "stats": [
           { "value": "7", "label": "Microservicios en 3 lenguajes" },
           { "value": "N niveles", "label": "Jerarquía PKI configurable por tenant" },
@@ -69,7 +69,7 @@
       {
         "id": "guanajuato",
         "name": "Ventanilla Virtual Guanajuato",
-        "description": "Plataforma de gestión de permisos de construcción con casi 10,000 usuarios activos, 53,446 licencias procesadas y $42.6M MXN recaudados por el estado en 5 años de producción. Coordiné la integración de pagos con CapitalNet, sincronizando flujos de cobro y confirmación vía webhooks. Mi rol evolucionó del desarrollo inicial a coordinación técnica directa con stakeholders estatales: gestión de comunicación, seguimiento de incidencias y dirección del equipo de desarrollo.",
+        "description": "Plataforma de gestión de permisos de construcción con casi 10,000 usuarios activos, 53,446 licencias procesadas y $42.6M MXN recaudados por el estado en 5 años de producción. Coordiné la integración de pagos con CapitalNet, sincronizando cobro y confirmación vía webhooks. Mi rol evolucionó del desarrollo a coordinación técnica directa con stakeholders estatales: comunicación, seguimiento de incidencias y dirección del equipo.",
         "stats": [
           { "value": "~10,000", "label": "Usuarios activos" },
           { "value": "53,446", "label": "Licencias procesadas" },
@@ -97,7 +97,7 @@
       {
         "id": "ciczac",
         "name": "CICZAC – Colegio de Ingenieros Civiles de Zacatecas",
-        "description": "Reconstrucción de emergencia de un sistema de terceros en producción que gestiona miembros del colegio, carga de documentos y verificación administrativa (incluyendo identificaciones oficiales), constancias fiscales y certificados profesionales. El sistema existente arrastraba deuda de seguridad seria: permisos 777 en directorios con documentos de identidad, contraseñas sin cifrar, riesgo de inyección SQL y código sin separación de responsabilidades. Rediseñé el esquema, implementé autenticación y permisos de archivo correctos, y migré todos los usuarios y documentos existentes sin pérdida de datos. De análisis a producción en 3 días, con CI/CD en GitHub Actions adaptado al hosting cPanel existente del cliente.",
+        "description": "Reconstrucción de emergencia de un sistema de terceros para un colegio profesional: registros de miembros, documentos y verificación de identificaciones y certificados. Deuda de seguridad: permisos 777 en directorios con documentos de identidad, contraseñas sin cifrar, riesgo de inyección SQL. Rediseñé el esquema, agregué autenticación y permisos de archivo, y migré usuarios y documentos sin pérdida de datos, de análisis a producción en 3 días.",
         "stats": [],
         "tags": ["Laravel", "Vue", "MySQL", "Seguridad", "Migración de Datos", "CI/CD"],
         "links": {
@@ -134,7 +134,7 @@
       {
         "id": "permisos-zacatecas",
         "name": "Permisos Capital de Zacatecas",
-        "description": "Plataforma de gestión de permisos de construcción para el municipio capital de Zacatecas. Coordiné la integración de tres sistemas críticos: el catálogo de costos nativo del municipio, la pasarela de pago de BBVA (banco del municipio) y la API de firmas digitales para la autorización legal de licencias. Esto implicó mantener integridad de datos entre la plataforma, la base de datos de finanzas municipales y el sistema de firmas de forma simultánea. La plataforma está actualmente fuera de línea debido a un cambio en la administración municipal, algo usual cuando el gobierno local migra su infraestructura digital.",
+        "description": "Plataforma de permisos de construcción para el municipio capital de Zacatecas. Coordiné tres sistemas: catálogo de costos del municipio, pasarela de pago de BBVA, y una API de firma digital para autorización de permisos. Esto implicó mantener integridad de datos entre la plataforma, finanzas y firmas a la vez. La plataforma está fuera de línea tras un cambio de administración municipal, usual cuando gobiernos locales migran su infraestructura.",
         "stats": [],
         "tags": ["Laravel", "MySQL", "Integración de Pagos", "Firmas Digitales", "Coordinación Técnica"],
         "links": {}
@@ -165,7 +165,6 @@
   "proof": {
     "sectionTitle": "Actualmente",
     "items": [
-      "Construyendo una Plataforma de Firma Digital. 7 microservicios en Go, Python y SoftHSM para firmas electrónicas con validez legal en documentos gubernamentales",
       "Estudiando para la certificación AWS Cloud Practitioner",
       "Único responsable técnico en cada proyecto activo, arquitectura, desarrollo y despliegue, con coordinación directa con bancos, sistemas de finanzas gubernamentales y equipos de ingeniería externos"
     ]

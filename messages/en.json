@@ -39,7 +39,7 @@
       {
         "id": "digital-signature",
         "name": "Digital Signature Platform",
-        "description": "Sole backend architect of a multi-tenant SaaS platform where organizations act as their own certificate authority, issuing digital signatures for their departments and staff. Each tenant configures its own PKI hierarchy with no depth limit; the first client runs four levels. I designed and built all 7 microservices end to end: identity and sessions, HSM key custody, X.509 certificate issuance, PAdES document signing, verification, audit, and a purpose-built API gateway. The MVP runs on SoftHSM and freeTSA behind hexagonal ports, so moving to a cloud HSM, Vault, accredited certificates and a certified timestamp authority means swapping adapters, not rewriting services. I used Claude Code throughout for architecture review and implementation. Backend v1 is complete and running in sandbox, with production rollout for a municipal government pending final integration.",
+        "description": "Sole backend architect of a multi-tenant SaaS platform where each organization acts as its own certificate authority and signs for its departments and staff. I built all 7 microservices: identity, HSM key custody, X.509 issuance, PAdES signing, verification, audit and an API gateway. Hexagonal ports keep SoftHSM and freeTSA swappable for a cloud HSM and certified TSA. Backend v1 complete, in sandbox pending rollout.",
         "stats": [
           { "value": "7", "label": "Microservices in 3 languages" },
           { "value": "N levels", "label": "PKI hierarchy configurable per tenant" },
@@ -69,7 +69,7 @@
       {
         "id": "guanajuato",
         "name": "Ventanilla Virtual Guanajuato",
-        "description": "Construction permit platform serving nearly 10,000 users, with 53,446 licenses processed and $42.6M MXN in state revenue collected over 5 years in production. I coordinated the payment integration with CapitalNet, synchronizing billing and confirmation flows via webhooks. After the initial development phase, my role evolved into direct technical coordination with state stakeholders, managing communication, tracking incidents end to end, and directing the engineering team toward resolution.",
+        "description": "Construction permit platform serving nearly 10,000 users, with 53,446 licenses processed and $42.6M MXN in state revenue collected over 5 years in production. I coordinated the payment integration with CapitalNet, synchronizing billing and confirmation flows via webhooks. My role evolved from development into direct technical coordination with state stakeholders: communication, incident tracking, and directing the engineering team.",
         "stats": [
           { "value": "~10,000", "label": "Active users" },
           { "value": "53,446", "label": "Licenses processed" },
@@ -97,7 +97,7 @@
       {
         "id": "ciczac",
         "name": "CICZAC - Colegio de Ingenieros Civiles de Zacatecas",
-        "description": "Emergency rebuild of a third-party production system handling professional association members, document uploads, and admin verification (including government IDs), tax statements, and professional certificates. The existing system carried serious security debt: 777 permissions on directories with identity documents, plaintext passwords, SQL injection risks, and no separation of concerns. I redesigned the schema, implemented proper authentication and file permissions, and migrated all existing users and documents without data loss. From analysis to production in 3 days, with CI/CD on GitHub Actions adapted to the client's existing cPanel hosting.",
+        "description": "Emergency rebuild of a third-party system for a professional association: member records, document uploads, and verification of government IDs and certificates. The system had security debt, 777 permissions on directories with identity documents, plaintext passwords, SQL injection risks. I redesigned the schema, added authentication and file permissions, and migrated all users and documents without data loss, analysis to production in 3 days.",
         "stats": [],
         "tags": ["Laravel", "Vue", "MySQL", "Security", "Data Migration", "CI/CD"],
         "links": {
@@ -134,7 +134,7 @@
       {
         "id": "permisos-zacatecas",
         "name": "Permisos Capital de Zacatecas",
-        "description": "Construction permit platform for the capital municipality of Zacatecas. I coordinated the integration of three critical systems: the municipality's native cost catalog, BBVA's payment gateway (the municipality's bank), and a digital signature API for legal permit authorization. This required maintaining data integrity across the platform, the municipal finance database, and the signature system simultaneously. The platform is currently offline following a change in municipal administration, a common occurrence when new local governments transition their digital infrastructure.",
+        "description": "Construction permit platform for the capital municipality of Zacatecas. I coordinated three systems: the municipality's cost catalog, BBVA's payment gateway, and a digital signature API for permit authorization. This meant keeping data integrity across the platform, finance database, and signature system at once. The platform is offline after a change in municipal administration, common when local governments transition their infrastructure.",
         "stats": [],
         "tags": ["Laravel", "MySQL", "Payment Integration", "Digital Signatures", "Technical Coordination"],
         "links": {}
@@ -165,7 +165,6 @@
   "proof": {
     "sectionTitle": "Currently",
     "items": [
-      "Building a Digital Signature Platform. 7 microservices in Go, Python, and SoftHSM for legally-valid electronic signatures on government documents",
       "Studying for AWS Cloud Practitioner certification",
       "Sole technical owner across every active project architecture, development, and deployment, with direct coordination across banks, government finance systems, and external engineering teams"
     ]

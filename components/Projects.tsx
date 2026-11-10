@@ -17,7 +17,7 @@ export default function Projects() {
   return (
     <section className="py-24">
       <h2 className="text-3xl font-bold mb-12">{t("sectionTitle")}</h2>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 gap-8 items-start">
         {projects.map((p) => (
           <div
             key={p.id}

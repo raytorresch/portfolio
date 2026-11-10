@@ -62,3 +62,7 @@ Project data (names, stats, revenue figures, user counts) reflects real producti
   feat(i18n): add ES locale for home page
   fix(hero): correct user count in stat strip
   chore(content): update bitacora stats from CV
+
+### UI
+- Project card descriptions: 450 characters max. Longer detail belongs in the case study page.
+- Widen only the Projects section container to max-w-5xl (keep Hero, StatStrip, Proof and Contact at max-w-3xl). Keep the 2-column grid and use items-start so cards don't stretch to the tallest sibling. Do not change any other layout.

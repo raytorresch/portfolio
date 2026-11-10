@@ -15,12 +15,16 @@ export default async function Home({
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-black font-sans">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-black sm:items-start">
-        <Hero />
-        <StatStrip />
+      <main className="flex min-h-screen w-full max-w-5xl flex-col items-center justify-between py-32 px-16 bg-black sm:items-start">
+        <div className="w-full max-w-3xl">
+          <Hero />
+          <StatStrip />
+        </div>
         <Projects />
-        <Proof />
-        <Contact />
+        <div className="w-full max-w-3xl">
+          <Proof />
+          <Contact />
+        </div>
       </main>
     </div>
   );
